@@ -9,11 +9,13 @@ import data from '../data/data.json';
 import TutorsList from './TutorsList';
 import CitiesList from './CitiesList';
 import DepartmentsList from './DepartmentsList';
+import Basket from './Basket/Basket';
 
 export const App = () => {
   return (
     <>
-      <Sidebar menu={menuConfig} logo="Logo" />
+      <Basket />
+      {/* <Sidebar menu={menuConfig} logo="Logo" />
       <Main>
         <Paper>
           <Card imgUrl={schoolImg} />
@@ -30,7 +32,7 @@ export const App = () => {
         <Paper>
           <DepartmentsList departments={data.department} />
         </Paper>
-      </Main>
+      </Main> */}
     </>
   );
 };
