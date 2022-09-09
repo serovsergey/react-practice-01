@@ -1,24 +1,19 @@
 // import PropTypes from 'prop-types'
 import s from './Tutor.module.css';
 
-function Tutor({ firstName, lastName, patronymic, phone, email, city, options }) {
+function Tutor({ name, phone, isRemote, checkedClass }) {
   return (
     <li>
       <p>
-        <span>{firstName}</span>
-        <span>{lastName}</span>
-        <span>{patronymic}</span>
-      </p>
-      <p>
+        <span>{name}</span>
         <span>{phone}</span>
-        <span>{email}</span>
-        <span>{city}</span>
+        <span>{isRemote ? 'remote' : 'offline'}</span>
+        <span>Tutor of {checkedClass}</span>
       </p>
-      <p>{options}</p>
     </li>
-  )
+  );
 }
 
 // Tutor.propTypes = {}
 
-export default Tutor
+export default Tutor;
